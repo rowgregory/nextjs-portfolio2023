@@ -5,7 +5,7 @@
   "scripts": {
     "generate": "prisma generate",
     "dev": "next dev",
-    "build": "npm run generage && next build",
+    "build": "npm run generate && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
-    "next-transpile-modules": "^10.0.0",
     "postcss-loader": "^7.3.2",
     "prisma": "^4.15.0",
     "ts-node": "^10.9.1",

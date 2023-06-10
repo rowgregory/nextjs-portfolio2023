@@ -4,10 +4,12 @@ import { useRouter } from 'next/navigation';
 import React, { useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { UserContext } from '../context/userContext.jsx';
+import { signIn } from 'next-auth/react';
 
 async function loginUser(email, password) {
   const body = { email, password };
   const response = await fetch(
+    // `http://localhost:3000/api/user?endpoint=login`,
     `https://nextjs-littlepawsdr-hfe7.vercel.app/api/user?endpoint=login`,
     {
       method: 'POST',
@@ -85,7 +87,7 @@ const LoginPage = () => {
       transition={{ duration: 0.25 }}
     >
       Login
-      <form>
+      <form className='mb-6'>
         <div className='flex flex-col mb-3'>
           <label>Email</label>
           <input
@@ -110,6 +112,15 @@ const LoginPage = () => {
           Login
         </button>
       </form>
+      <div className='mb-4'>Sign in with socials</div>
+      <div className='flex flex-col'>
+        <button
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25'
+          onClick={() => signIn()}
+        >
+          Google
+        </button>
+      </div>
     </motion.div>
   );
 };

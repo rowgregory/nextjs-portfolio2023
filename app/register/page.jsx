@@ -7,7 +7,8 @@ import { UserContext } from '../context/userContext.jsx';
 async function registerUser(firstName, lastName, email, password) {
   const body = { firstName, lastName, email, password };
   const response = await fetch(
-    'http://localhost:3000/api/user?endpoint=register',
+    // 'http://localhost:3000/api/user?endpoint=register',
+    'https://nextjs-littlepawsdr-hfe7.vercel.app/api/user?endpoint=register',
     {
       method: 'POST',
       headers: {

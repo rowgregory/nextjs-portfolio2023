@@ -12,14 +12,14 @@ export async function POST(request) {
   const user = await request.json();
 
   if (query === 'login') {
-    const foundUser = await prisma.user.findUnique({
-      where: { email: user.email },
+    const foundUser = await prisma.userBasic.findUnique({
+      where: { email: user.email.toLowerCase() },
     });
 
     if (!foundUser) return NextResponse.json({ message: 'User not found' });
 
     const validPassword = await bcrypt.compare(
-      user.password,
+      user.password.toLowerCase(),
       foundUser.password
     );
 
@@ -32,8 +32,8 @@ export async function POST(request) {
         { expiresIn: '7d' }
       );
 
-      const updatedUser = await prisma.user.update({
-        where: { email: user.email },
+      const updatedUser = await prisma.userBasic.update({
+        where: { email: user.email.toLowerCase() },
         data: { token },
       });
       return NextResponse.json(updatedUser);
@@ -54,7 +54,7 @@ export async function POST(request) {
       { expiresIn: '7d' }
     );
 
-    const createdUser = await prisma.user.create({
+    const createdUser = await prisma.userBasic.create({
       data: {
         id: uuidv4(),
         firstName: user.firstName,

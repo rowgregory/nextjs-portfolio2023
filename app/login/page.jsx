@@ -8,7 +8,7 @@ import { UserContext } from '../context/userContext.jsx';
 async function loginUser(email, password) {
   const body = { email, password };
   const response = await fetch(
-    `${process.env.VERCEL_BASE_URL}/api/user?endpoint=login`,
+    `${process.env.NEXT_PUBLIC_VERCEL_BASE_URL}/api/user?endpoint=login`,
     {
       method: 'POST',
       headers: {

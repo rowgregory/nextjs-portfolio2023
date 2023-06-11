@@ -115,10 +115,16 @@ const LoginPage = () => {
       <div className='mb-4'>Sign in with socials</div>
       <div className='flex flex-col'>
         <button
-          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25'
-          onClick={() => signIn()}
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25 mb-2'
+          onClick={() => signIn('google')}
         >
           Google
+        </button>
+        <button
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25'
+          onClick={() => signIn('discord')}
+        >
+          Discord
         </button>
       </div>
     </motion.div>

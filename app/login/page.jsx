@@ -121,10 +121,23 @@ const LoginPage = () => {
           Google
         </button>
         <button
-          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25'
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25 mb-2'
           onClick={() => signIn('discord')}
         >
           Discord
+        </button>
+        <button
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25 mb-2'
+          onClick={() => signIn('github')}
+        >
+          GitHub
+        </button>
+
+        <button
+          className='text-sm bg-gray-700 text-white py-2 px-6 rounded-xl disabled:opacity-25'
+          onClick={() => signIn('facebook')}
+        >
+          Facebook
         </button>
       </div>
     </motion.div>

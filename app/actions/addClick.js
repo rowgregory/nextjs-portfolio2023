@@ -1,4 +1,4 @@
-import { headers } from '../../public/headers.JSX'
+import { headers } from '../../public/headers.jsx'
 
 export async function addClick(click) {
   console.log('CLICK: ', click)

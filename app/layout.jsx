@@ -5,20 +5,22 @@ import { UserProvider } from './context/userContext.jsx'
 import SessionProvider from './components/SessionProvider.jsx'
 import { LogoClicksProvider } from './context/logoClicksContext.jsx'
 import PageWrapper from './page-wrapper.jsx'
+import { VERCEL_BASE } from './../public/urls.js'
 
 const monserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL(VERCEL_BASE),
   title: 'Gregory Row',
-  description: 'Thanks for being here.'
-  // openGraph: {
-  //   title: 'Gregory Row portfolio',
-  //   description: 'Portfolio to showcase projects',
-  //   url: 'https://www.gregoryrow.com',
-  //   siteName: 'Gregory Row',
-  //   locale: 'en_US',
-  //   type: 'website'
-  // }
+  description: 'Thanks for being here.',
+  openGraph: {
+    title: 'Gregory Row portfolio',
+    description: 'Portfolio to showcase projects',
+    url: 'https://www.gregoryrow.com',
+    siteName: 'Gregory Row',
+    locale: 'en_US',
+    type: 'website'
+  }
 }
 
 export default function RootLayout({ children }) {

@@ -6,6 +6,7 @@ import FacebookProvider from 'next-auth/providers/facebook'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import prisma from '../../../prisma/client'
+import { VERCEL_BASE } from '../../../public/urls.js'
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
@@ -19,16 +20,13 @@ export const authOptions = {
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials, req) {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_VERCEL_BASE}/api/user?endpoint=login`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(credentials)
-          }
-        )
+        const response = await fetch(`${VERCEL_BASE}/api/user?endpoint=login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(credentials)
+        })
 
         if (response.ok) {
           const user = await response.json()

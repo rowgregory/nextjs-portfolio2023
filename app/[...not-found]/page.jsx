@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 const NotFound = () => {
   return (
@@ -7,7 +9,7 @@ const NotFound = () => {
         <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

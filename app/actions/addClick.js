@@ -1,9 +1,9 @@
-import { headers } from '../../public/headers';
+import { headers } from '../../public/headers'
 
 export async function addClick(click) {
-  await fetch('http://localhost:3000/api/clicks?endpoint=clicks', {
+  await fetch(`${process.env.VERCEL_BASE}/api/clicks?endpoint=clicks`, {
     method: 'POST',
     headers,
-    body: JSON.stringify(click),
-  });
+    body: JSON.stringify(click)
+  })
 }

@@ -1,30 +1,30 @@
-'use client';
+'use client'
 
-import TopCorner from './components/svg/TopCorner.jsx';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import BottomCorner from './components/svg/BottomCorner.jsx';
-import ParticleBackground from './components/ParticleBackground.jsx';
-import { StyleSheetManager } from 'styled-components';
-import isPropValid from '@emotion/is-prop-valid';
-import { usePathname } from 'next/navigation';
+import TopCorner from './components/svg/TopCorner.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import BottomCorner from './components/svg/BottomCorner.jsx'
+import ParticleBackground from './components/ParticleBackground.jsx'
+import { StyleSheetManager } from 'styled-components'
+import isPropValid from '@emotion/is-prop-valid'
+import { usePathname } from 'next/navigation'
 
 const outerContainer =
-  'max-w-screen h-screen max-h-screen items-start x9:items-center justify-center flex ';
+  'max-w-screen h-screen max-h-screen items-start x9:items-center justify-center flex overflow-y-scroll'
 const innerContainer =
-  'x9:max-h-[791px] x9:h-screen flex relative w-screen max-w-[1280px] p-5';
+  'x9:max-h-[791px] x9:h-screen flex relative w-screen max-w-[1280px] p-5'
 
 const PageWrapper = ({ children }) => {
-  const pathname = usePathname();
+  const pathname = usePathname()
   if (pathname === '/plexx') {
-    return children;
+    return children
   }
   if (pathname === '/plexx2') {
     return (
       <div className="h-screen flex justify-center items-center">
         {children}
       </div>
-    );
+    )
   }
 
   return (
@@ -47,7 +47,7 @@ const PageWrapper = ({ children }) => {
       </StyleSheetManager>
       <ParticleBackground />
     </>
-  );
-};
+  )
+}
 
-export default PageWrapper;
+export default PageWrapper

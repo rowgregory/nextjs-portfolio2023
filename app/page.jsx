@@ -1,5 +1,5 @@
-import ProjectDescription from './components/ProjectDescription';
-import ProjectList from './components/ProjectList';
+import ProjectDescription from './components/ProjectDescription'
+import ProjectList from './components/ProjectList'
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
       <div className="min-w-[90px] max-w-[130px]"></div>
       <ProjectList />
     </main>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

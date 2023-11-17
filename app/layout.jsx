@@ -9,7 +9,7 @@ import PageWrapper from './page-wrapper.jsx'
 const monserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL(process.env.VERCEL_BASE),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_BASE),
   title: 'Gregory Row',
   description: 'Thanks for being here.',
   openGraph: {

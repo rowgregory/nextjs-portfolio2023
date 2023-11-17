@@ -20,7 +20,7 @@ export const authOptions = {
       },
       async authorize(credentials, req) {
         const response = await fetch(
-          `${process.env.VERCEL_BASE}/api/user?endpoint=login`,
+          `${process.env.NEXT_PUBLIC_VERCEL_BASE}/api/user?endpoint=login`,
           {
             method: 'POST',
             headers: {

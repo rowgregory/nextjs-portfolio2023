@@ -9,17 +9,16 @@ import PageWrapper from './page-wrapper.jsx'
 const monserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_BASE),
   title: 'Gregory Row',
-  description: 'Thanks for being here.',
-  openGraph: {
-    title: 'Gregory Row portfolio',
-    description: 'Portfolio to showcase projects',
-    url: 'https://www.gregoryrow.com',
-    siteName: 'Gregory Row',
-    locale: 'en_US',
-    type: 'website'
-  }
+  description: 'Thanks for being here.'
+  // openGraph: {
+  //   title: 'Gregory Row portfolio',
+  //   description: 'Portfolio to showcase projects',
+  //   url: 'https://www.gregoryrow.com',
+  //   siteName: 'Gregory Row',
+  //   locale: 'en_US',
+  //   type: 'website'
+  // }
 }
 
 export default function RootLayout({ children }) {

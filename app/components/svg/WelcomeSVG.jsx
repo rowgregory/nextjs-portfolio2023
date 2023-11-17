@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { addClick } from '../../actions/addClick.js'
 
 const WelcomeSVG = () => {
   const draw = {
@@ -27,6 +28,7 @@ const WelcomeSVG = () => {
       className="group mt-5 x9:mt-0"
       initial="hidden"
       animate="visible"
+      onClick={() => addClick('welcomeClicks')}
     >
       <motion.path
         variants={draw}

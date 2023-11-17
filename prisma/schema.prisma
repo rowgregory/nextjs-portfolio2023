@@ -88,8 +88,9 @@ model Clicks {
 }
 
 model Message {
-  id      String @id
-  name    String
-  email   String
-  message String
+  id        String   @id
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
 }

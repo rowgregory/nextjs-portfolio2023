@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "tile000.png",
+	"frame": {"x":1,"y":1,"w":60,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":60,"h":45},
+	"sourceSize": {"w":65,"h":45}
+},
+{
+	"filename": "tile001.png",
+	"frame": {"x":1,"y":48,"w":61,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":61,"h":43},
+	"sourceSize": {"w":65,"h":45}
+},
+{
+	"filename": "tile002.png",
+	"frame": {"x":63,"y":1,"w":60,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":60,"h":44},
+	"sourceSize": {"w":65,"h":45}
+},
+{
+	"filename": "tile003.png",
+	"frame": {"x":64,"y":47,"w":57,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":57,"h":44},
+	"sourceSize": {"w":65,"h":45}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "plant-idle.png",
+	"format": "RGBA8888",
+	"size": {"w":124,"h":92},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ef5fa5521bc9f1bdb8e45e815c1be082:a3d32ec56e54119b9bf1e060b3a8f3f1:9475063bf4bd8fc629505ed255861adb$"
+}
+}

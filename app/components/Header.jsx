@@ -1,20 +1,19 @@
-'use client';
-
-import React from 'react';
-import { signOut, useSession } from 'next-auth/react';
+import Logo from './svg/Logo';
+import Gmail from './svg/Gmail';
+import Github from './svg/Github';
+import { addClick } from '../actions/addClick.js';
 import Link from 'next/link.js';
 
 const Header = () => {
-  const { data: session } = useSession();
-
   return (
-    <header className='fixed'>
-      Header <div>{session?.user?.email}</div>{' '}
-      {session?.user ? (
-        <button onClick={() => signOut()}>Logout</button>
-      ) : (
-        <Link href='/login'>Login</Link>
-      )}
+    <header className="w-full flex justify-between">
+      <Link href="/" onClick={() => addClick('logoClicks')}>
+        <Logo />
+      </Link>
+      <div className="flex">
+        <Gmail />
+        <Github />
+      </div>
     </header>
   );
 };

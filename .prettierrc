@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": ["**.js", "**.jsx"],
+      "options": {
+        "parser": "babel",
+        "jsxBracketSameLine": false,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "semi": false
+      }
+    }
+  ]
+}

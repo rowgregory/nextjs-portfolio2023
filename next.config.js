@@ -1,15 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['cdn.rescuegroups.org'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.rescuegroups.org',
-        port: '',
-        pathname: '/',
-      },
-    ],
+  compiler: {
+    styledComponents: true,
   },
   async headers() {
     return [

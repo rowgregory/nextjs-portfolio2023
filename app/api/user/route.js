@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server.js';
 import { v4 as uuidv4 } from 'uuid';
 import bcrypt from 'bcrypt';
-import { prisma } from '@/app/db.js';
 import jwt from 'jsonwebtoken';
+import { prisma } from '../../db.js';
 
 export async function GET(request) {}
 
@@ -66,6 +66,17 @@ export async function POST(request) {
     });
 
     return NextResponse.json(createdUser);
+  } else if (query === 'message') {
+    await prisma.message.create({
+      data: {
+        id: uuidv4(),
+        name: user.name,
+        email: user.email,
+        message: user.message,
+      },
+    });
+
+    return NextResponse.json({ messagedCreated: true });
   } else {
     // Invalid endpoint
     return NextResponse.error('Invalid endpoint');

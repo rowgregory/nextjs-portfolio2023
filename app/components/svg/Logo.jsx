@@ -1,14 +1,16 @@
-import { useLogoClicksContext } from '../../context/logoClicksContext.jsx';
-import { useProjectContext } from '../../context/projectContext.jsx';
+import { addClick } from '../../actions/addClick.js'
+import { useLogoClicksContext } from '../../context/logoClicksContext.jsx'
+import { useProjectContext } from '../../context/projectContext.jsx'
 
 const Logo = () => {
-  const { setCurrentProject } = useProjectContext();
-  const { setClickedLogo } = useLogoClicksContext();
+  const { setCurrentProject } = useProjectContext()
+  const { setClickedLogo } = useLogoClicksContext()
   return (
     <svg
       onClick={() => {
-        setClickedLogo();
-        setCurrentProject('Welcome');
+        setClickedLogo()
+        setCurrentProject('Welcome')
+        addClick('logoClicks')
       }}
       width="50px"
       height="50px"
@@ -50,7 +52,7 @@ const Logo = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

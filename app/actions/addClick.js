@@ -1,9 +1,14 @@
-import { headers } from '../../public/headers'
+import { headers } from '../../public/headers.JSX'
 
 export async function addClick(click) {
-  await fetch(`${process.env.VERCEL_BASE}/api/clicks?endpoint=clicks`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(click)
-  })
+  console.log('CLICK: ', click)
+  try {
+    await fetch(`${process.env.VERCEL_BASE}/api/clicks?endpoint=clicks`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(click)
+    })
+  } catch (err) {
+    console.log('CLICK ERROR: ', err)
+  }
 }
